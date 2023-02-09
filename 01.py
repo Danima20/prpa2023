@@ -9,11 +9,11 @@ def task(common, tid, turn):
 		print(f'{tid}-{i}:End of non-critical Section')
 		while turn.value!=tid:
 			pass
-		print(f'{tid}−{i}: Critical sectoin')
+		print(f'{tid}−{i}: Critical secooin')
 		v = common.value + 1
-		print(f'{tid}−{i}: Inside critical sectoin') 
+		print(f'{tid}−{i}: Inside critical secooin') 
 		common.value = v
-		print(f'{tid}−{i}: End of critical sectin')
+		print(f'{tid}−{i}: End of critical sectoin')
 		turn.value (tid + 1) % N		
 
 def main():
@@ -22,7 +22,7 @@ def main():
 	turn = Value('i', 0)
 	for tid in range(N):
 		lp.append(Process(target=task, args=(common, tid, turn)))
-	print (f"Valor inicial del contador {common.value}")
+	print (f'Valor inicial del contador {common.value}')
 	for p in lp:
 		p.start()
 	for p in lp:
