@@ -1,7 +1,5 @@
 from multiprocessing import Process, current_process, Value, Array
-'''
-Deja de tocar los cojones!
-'''
+
 N=8
 def task(common, tid, turn):
 	a=0
@@ -16,7 +14,7 @@ def task(common, tid, turn):
 		print(f'{tid}−{i}: Inside critical secooin') 
 		common.value = v
 		print(f'{tid}−{i}: End of critical sectoin')
-		turn.value (tid + 1) % N		
+		turn.value(tid+1)%N	
 
 def main():
 	lp = []
