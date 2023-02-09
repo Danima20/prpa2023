@@ -3,7 +3,7 @@ from multiprocessing import Process, current_process, Value, Array
 N=8
 def task(common, tid, turn):
 	a=0
-	for i in range(100):
+	for i in range(10):
 		print(f'{tid}-{i}:Non-critical Section')
 		a += 1
 		print(f'{tid}-{i}:End of non-critical Section')
@@ -14,7 +14,7 @@ def task(common, tid, turn):
 		print(f'{tid}−{i}: Inside critical Section') 
 		common.value = v
 		print(f'{tid}−{i}: End of critical Section')
-		turn.value=(tid+1)%N	
+		turn.value=(tid+1)%N
 
 def main():
 	lp = []
