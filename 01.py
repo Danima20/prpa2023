@@ -9,12 +9,12 @@ def task(common, tid, turn):
 		print(f'{tid}-{i}:End of non-critical Section')
 		while turn.value!=tid:
 			pass
-		print(f'{tid}−{i}: Critical secooin')
+		print(f'{tid}−{i}: Critical Section')
 		v = common.value + 1
-		print(f'{tid}−{i}: Inside critical secooin') 
+		print(f'{tid}−{i}: Inside critical Section') 
 		common.value = v
-		print(f'{tid}−{i}: End of critical sectoin')
-		turn.value(tid+1)%N	
+		print(f'{tid}−{i}: End of critical Section')
+		turn.value=(tid+1)%N	
 
 def main():
 	lp = []
@@ -29,5 +29,6 @@ def main():
 		p.join()
 	print (f"Valor final del contador {common.value}")
 	print ("fin")
+        
 if __name__ == "__main__":
 	main()
