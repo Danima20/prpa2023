@@ -1,5 +1,7 @@
 from multiprocessing import Process, current_process, Value, Array
-
+'''
+Deja de tocar los cojones!
+'''
 N=8
 def task(common, tid, turn):
 	a=0
